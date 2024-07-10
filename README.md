@@ -23,9 +23,9 @@ Raycasting: Raycasting is a rendering technique used to create a 3D perspective 
 
 you can compile the project using GCC:
 
-gcc -o 3D_Bunny_Maze main.c -I./headers -lSDL2 -lSDL2_image
+gcc -o 3D_Maze_Bunny main.c -I./headers -lSDL2 -lSDL2_image
 
 to run and interact with your 3D game
-./3D_Bunny_Maze
+./3D_Maze_Bunny
 
 
