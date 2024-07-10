@@ -1,98 +1,31 @@
 3D_Maze_Bunny
-This is the alternate 'Maze Project' for the 'Research & Project Approval' in the ALX Software Engineering program.
 
-Background Context
-The goal of this project is to create a game in 3D
+Bunny Maze 3D is an exciting project aimed at exploring 3D game development using SDL2 and C. It focuses on creating immersive 3D environments and challenging maze puzzles.
 
+Project Structure
+The project follows a simple directory structure:
 
-Tasks
-0-Walls
+main.c: Contains all the source of the code
+headers: Contains header files with function declarations and constants.
+images: Holds image assets used in the game.
 
-In this first part, you’ll have to:
+Dependencies
+This project relies on the following dependencies:
 
--Create a window with SDL2
--Use raycasting to draw walls on your window !
--You don’t need to be able to rotate the camera during the execution in this part, but you must provide a way to change the angle of the camera in your code to see if it works after recompiling it
--The color of the walls must be different from the color of the ground/ceil
--The map doesn’t need to be parsed from a file, but you must provide a way to modify it in your code to see if it works after recompiling it. (e.g. using an array of arrays of integers or characters)
+SDL2: A cross-platform development library designed to provide low-level access to audio, keyboard, mouse, joystick, and graphics hardware.
+SDL2_image: An extension library that enables loading and saving images in various formats.
 
-1-Orientation
+Introducing SDL2 and Raycasting for Understanding
+Simple DirectMedia Layer (SDL) is a cross-platform software development library designed to provide a hardware abstraction layer for computer multimedia hardware components. Software developers can use it to write high-performance computer games and other multimedia applications that can run on many operating systems such as Android, iOS, Linux, macOS, and Windows. SDL manages video, audio, input devices, CD-ROM, threads, shared object loading, networking and timers.
 
-In this part, you must draw a different color depending on the orientation of the walls.
+SDL2: SDL2 is a powerful library that simplifies the process of creating graphical applications. It provides functions for handling windows, rendering graphics, and capturing user input.
+Raycasting: Raycasting is a rendering technique used to create a 3D perspective effect in 2D environments. It involves casting rays from the player's viewpoint and calculating intersections with objects in the scene to determine what is visible.
 
-You must at least draw walls facing NORTH and SOUTH in a different color from walls facing EAST and WEST
-Rotation
+you can compile the project using GCC:
 
-You must provide a way to rotate the camera during the execution.
+gcc -o 3D_Bunny_Maze main.c -I./headers -lSDL2 -lSDL2_image
 
-For example, you can rotate the camera when the left,right arrows are pressed on the keyboard
-Or you can rotate the camera when the mouse moves, just like a FPS game !
-Move
+to run and interact with your 3D game
+./3D_Bunny_Maze
 
-You must provide a way to move the camera during the execution.
-
-For example, you can move the camera when the w,a,s,d keys are pressed on the keyboard
-Ouch !
-
-In this part, you must handle the collisions of the player (yes, let’s call the camera player now, it’s getting serious) with the walls.
-
-The player must not be able to enter walls
-You can make the player slide on the walls instead of just stop it
-Parser
-
-In this part you must implement a parser to get the map from a file.
-
-You are free to define the standards of your map (The character for a wall, the character for nothing, the extension of the file if you want, …)
-Your program will need a parameter to run which will be the path to the map file
-
-2-Draw the map
-
-In this part, you must draw the map on the window.
-
-You’re free to draw the map where you want, with the color you want, …
-You must provide a way to enable/disable it during the execution
-Include the player’s line of sight in the map
-Coding style + Documentation
-
-Check if your code fits the Holberton School coding style
-Check if your code is well documented and respect the Holberton School documentation format
-You can check all of this by yourself, just follow the instructions on this repository.
-
-Be careful
-
-The check will be done on each file present on your turn in repository. Even the files that was not required. So don’t forget to always keep your turn in directory clean.
-
-3-Textures
-
-In this part you have to add textures on your walls !
-
-Multi task !
-
-Add a way to move on several directions and rotate in the same time. Basically in this part you’ll have to handle multiple events on the same frame.
-
-For example, if the keys to move are w,a,s,d:
-
-If the keys w and s are pressed in the same time, the player shouldn’t move,
-If the keys w and d are pressed in the same time, the player should move forward and right in the same time,
-…
-
-4-Ground textures
-
-In this part you have to add textures on the ground and/or on the ceiling !
-
-Weapons
-
-Add weapons textures !
-
-Enemies
-
-Add some enemies !
-
-Make it rain
-
-Add rain and a possibility to stop / start the rain with a key.
-
-Extra option
-
-Shadows, special lightning, etc… get creative!
 
